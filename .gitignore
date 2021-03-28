@@ -1,8 +1,1 @@
-.devcontainer/devcontainer.json
-.devcontainer/Dockerfile
-srcdir/tlspack-socket
-srcdir/tlspack-traffic
-srcdir/meson.build
-srcdir/subprojects
-srcdir/llhttp
-srcdir/build
+srcdir/
