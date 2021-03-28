@@ -31,7 +31,7 @@
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
 
-	"workspaceMount": "src=/Users/Shirish/Devlopment/tlspack-build/srcdir/,dst=/srcdir,type=bind",
+	"workspaceMount": "src=<tlspack-build_path>/srcdir/,dst=/srcdir,type=bind",
 	"workspaceFolder": "/srcdir",
 	
 	// Add the IDs of extensions you want installed when the container is created in the array below.
