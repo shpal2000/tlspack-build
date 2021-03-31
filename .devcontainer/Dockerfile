@@ -20,6 +20,7 @@ ARG USER_GID=$USER_UID
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -yq install apt-utils \
+    && apt-get -yq install mongodb \
     #
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
     && apt-get -yq install git iproute2 procps lsb-release \
@@ -86,6 +87,6 @@ RUN apt-get update \
     && apt-get autoremove -yq \
     && apt-get clean -yq \
     && rm -rf /var/lib/apt/lists/* 
-RUN pip3 install fastapi uvicorn orjson python-dotenv requests pytest
+RUN pip3 install fastapi uvicorn orjson python-dotenv requests pytest aiohttp pymongo jinja2
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=
